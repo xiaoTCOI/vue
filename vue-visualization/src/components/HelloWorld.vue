@@ -220,6 +220,7 @@ import $ from 'jquery';
           //绘制折线图
           
           heart.setOption({
+            animation:false,
             title: { text: '在Vue中使用echarts' },
               tooltip: {},
               legend:{},
