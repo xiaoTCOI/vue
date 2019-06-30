@@ -1,0 +1,107 @@
+// 共同样式
+.col(){
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.content(){
+  box-sizing: border-box;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  height: 180px;
+  width: 80%;
+  h3{
+    // margin-top: -20px;
+    margin-bottom: 0px;
+  }
+  .introduce{
+    width: 80%;
+    height: 90%;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    font-size: 10%;
+    // p{
+    //   font-size: 8%;
+    //   text-align: left;
+    //   margin-bottom: 0px;
+    //   margin-top: 3px;
+    // }
+  }
+}
+
+.r-main{
+  // width: 100%;
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  left: 0;
+  background-color:#F3F3F3;
+  .main{
+    background-color:#F3F3F3;
+  }
+  // overflow: hidden;
+  //ISO
+  .block-one{
+    .col;
+    .iso{
+      .content;
+    }
+  }
+  //市场
+  .block-two{
+    .col;
+    .market{
+      .content;
+    }
+  }
+  // 材料
+  .block-three{
+    .col;
+    .material{
+      .content;
+    }
+  }
+  //厂房
+  .block-four{
+    .col;
+    .factory{
+      .content;
+    }
+  }
+  //生产线
+  .block-five{
+    .col;
+    .prodline{
+      .content;
+    }
+  }
+  //产品
+  .block-six{
+    .col;
+    .product{
+      .content;
+    }
+  }
+  //仓储
+  .block-seven{
+    .col;
+    .stock{
+      .content;
+    }
+  }
+  //运输方式
+  .block-eight{
+    .col;
+    .transport{
+      .content;
+    }
+  }
+}
