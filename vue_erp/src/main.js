@@ -15,6 +15,12 @@ import qs from 'qs';
 Vue.prototype.$qs = qs;
 // 配置请求的根路径
 axios.defaults.baseURL = 'http://timemeetyou.com:8889/api/private/v1/'
+// axios请求拦截
+axios.interceptors.request.use(config=>{
+  // 为请求头对象，添加Token验证的Authorization字段
+  config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config
+})
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 Vue.use(ElementUI)

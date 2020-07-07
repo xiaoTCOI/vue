@@ -63,14 +63,14 @@ export default {
       this.$refs.loginFormRef.validate(valid=>{
         if(!valid) return;
         this.$axios({
-        method:"post",
+        method:'post',
         url:'login',
         data:postData,
         headers:{'Content-Type':'application/json'}
         }).then(res=>{
           console.log(res.data.data.token)
           if(res.data.meta.status!=200) return this.$message.error(res.data.meta.msg)
-          this.$message.success(res.data.meta.msg)
+          this.$message.success(res.data.meta.msg);
           // 将token保存在sessionStorage中
           window.sessionStorage.setItem('token',res.data.data.token);
           // 登录成功后页面进行跳转
