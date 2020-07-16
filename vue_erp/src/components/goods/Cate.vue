@@ -250,7 +250,6 @@ export default {
     },
     // 点击按钮添加新的分类
     addCate(){
-      console.log(this.parentCateList)
       this.$refs.addCateFormRef.validate(valid=>{
         if(!valid) return
         this.$axios.post('categories',this.addCateForm).then(res=>{
@@ -332,4 +331,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+  .el-cascader{
+  width: 100%;
+}
 </style>

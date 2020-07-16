@@ -7,6 +7,8 @@ import Users from '@/components/user/Users'
 import Rights from '@/components/power/Rights'
 import Roles from '@/components/power/Roles'
 import Cate from '@/components/goods/Cate'
+import Params from '@/components/goods/Params'
+import Goods from '@/components/goods/Goods'
 Vue.use(Router)
 
 const router = new Router({
@@ -52,6 +54,16 @@ const router = new Router({
           path: '/categories',
           name: '商品分类',
           component: Cate
+        },
+        {
+          path: '/params',
+          name: '分类参数',
+          component: Params
+        },
+        {
+          path: '/goods',
+          name: '商品列表',
+          component: Goods
         }
       ]
     }
