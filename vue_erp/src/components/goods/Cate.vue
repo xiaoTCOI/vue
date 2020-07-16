@@ -309,7 +309,7 @@ export default {
     // 根据id删除对应的角色信息
     async removeCateById(id){
        // 弹框询问用户是否删除数据
-       const confirmResult = await this.$confirm('此操作将永久删除该商品分类, 是否继续?', '提示', {
+      const confirmResult = await this.$confirm('此操作将永久删除该商品分类, 是否继续?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
