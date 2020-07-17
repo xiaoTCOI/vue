@@ -11,6 +11,7 @@ import Params from '@/components/goods/Params'
 import Goods from '@/components/goods/Goods'
 import Add from '@/components/goods/Add'
 import Order from '@/components/order/Order.vue'
+import Report from '@/components/report/Report.vue'
 Vue.use(Router)
 
 const router = new Router({
@@ -76,6 +77,11 @@ const router = new Router({
           path: '/orders',
           name: '订单列表',
           component: Order
+        },
+        {
+          path: '/reports',
+          name: '数据报表',
+          component: Report
         }
       ]
     }
