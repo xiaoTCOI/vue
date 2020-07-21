@@ -18,15 +18,35 @@ import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 import axios from 'axios'
 import qs from 'qs';
+//导入
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
+
 Vue.prototype.$qs = qs;
 // 配置请求的根路径
 axios.defaults.baseURL = 'http://timemeetyou.com:8889/api/private/v1/'
+// 展示进度条NProgress.start()
+router.beforeEach((to, from, next) => {
+  NProgress.start()
+  next()
+})
+// 隐藏进度条NProgress.done()
+router.afterEach(() => {
+  NProgress.done()
+})
 // axios请求拦截
 axios.interceptors.request.use(config=>{
+  // NProgress.start()
   // 为请求头对象，添加Token验证的Authorization字段
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
 })
+
+// axios.interceptors.response.use(config=>{
+//   NProgress.done()
+//   return config
+// })
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 Vue.component('tree-table', TreeTable)

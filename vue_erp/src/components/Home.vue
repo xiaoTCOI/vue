@@ -1,7 +1,5 @@
 <template>
-
   <el-container class="home-container">
-
     <!-- 头部区域 -->
     <el-header>
       <div>
@@ -88,7 +86,6 @@ export default {
         methods:'get',
         url:'menus'
       }).then(res=>{
-        console.log(res.data)
         if(res.data.meta.status!=200)
           return this.$message.error(res.data.meta.msg);
         this.menulist = res.data.data;
